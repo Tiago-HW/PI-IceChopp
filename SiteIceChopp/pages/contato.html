@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato | Sua Distribuidora</title>
+  <meta name="description" content="Peça um orçamento de chopp para o seu negócio ou evento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="..\css\estilo.css">
+</head>
+
+<body>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="index.html">Sua Distribuidora</a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="..\index.html">Início</a></li>
+          <li><a href=".\produtos.html">Produtos</a></li>
+          <li><a href=".\servicos.html">Serviços</a></li>
+          <li><a href=".\contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="pagina-topo">
+      <div class="wrap">
+        <h1>Contato</h1>
+        <p>Preencha o formulário e continue a conversa pelo WhatsApp.</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrap duas" style="align-items:start">
+        <form id="form-orcamento">
+          <label>Nome<input name="nome" required autocomplete="name"></label>
+          <label>Telefone<input name="tel" type="tel" required autocomplete="tel"></label>
+          <label>Tipo de atendimento
+            <select name="tipo" required>
+              <option value="">Selecione</option>
+              <option>Varejo (mercado, bar, restaurante)</option>
+              <option>Evento (aluguel de barris)</option>
+              <option>Pessoa física</option>
+            </select>
+          </label>
+          <label>Data do evento (se houver)<input name="data" type="date"></label>
+          <label>Quantidade de convidados ou consumo estimado<input name="qtd" placeholder="Ex.: 80 convidados"></label>
+          <label>Mensagem<textarea name="msg" rows="4"></textarea></label>
+          <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+          <p class="nota">Ao enviar, abriremos o WhatsApp com sua mensagem pronta.</p>
+        </form>
+        <div class="cartao">
+          <h3>Atendimento</h3>
+          <p>WhatsApp: (00) 00000-0000<br>E-mail: contato@seudominio.com.br<br>Seg a sáb, 8h às 18h</p>
+          <h3 style="margin-top:1.2rem">Endereço</h3>
+          <p>Rua Exemplo, 123 – Bairro<br>Cidade – UF</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="wrap">
+      <div>
+        <h3>Sua Distribuidora</h3>
+        <p>Distribuidora de chopp para mercados, bares, restaurantes e eventos.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>WhatsApp: (00) 00000-0000<br>E-mail: contato@seudominio.com.br<br>Seg a sáb, 8h às 18h</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p>Rua Exemplo, 123 – Bairro<br>Cidade – UF</p>
+      </div>
+    </div>
+    <div class="wrap"><small>© 2026 Sua Distribuidora. Beba com moderação. Venda proibida para menores de 18
+        anos.</small></div>
+  </footer>
+  <script>
+    // Troque pelo número real, com DDI e DDD, só dígitos. Ex.: 5554999999999
+    const NUMERO = "5500000000000";
+    document.getElementById("form-orcamento").addEventListener("submit", e => {
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const linhas = [
+        "Olá! Gostaria de um orçamento.",
+        "Nome: " + f.get("nome"),
+        "Telefone: " + f.get("tel"),
+        "Atendimento: " + f.get("tipo"),
+        f.get("data") ? "Data: " + f.get("data").split("-").reverse().join("/") : "",
+        f.get("qtd") ? "Quantidade: " + f.get("qtd") : "",
+        f.get("msg") ? "Mensagem: " + f.get("msg") : ""
+      ].filter(Boolean).join("\n");
+      window.open("https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(linhas), "_blank");
+    });
+  </script>
+</body>
+
+</html>
