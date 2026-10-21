@@ -1,0 +1,28 @@
+3° aula PI
+Tópicos da aula:
+1 - Iniciar a etapa de análise de requisitos do sistema
+	1.1 - Cria um questionário, com perguntas sobre a função do sistema (a quantidade de perguntas vai variar de cada sistema);
+	1.2 - Realizar entrevista com o cliente (entrevista com o responsável da empresa);
+	1.3 - Verificar a identidade visual da empresa (logotipo, logomarca, banners, plano de fundo, cores utilizadas pela empresa e etc).
+2 - Iniciar a Documentação técnica
+	2.2 - Capa
+	2.3 - Folha de rosto
+	2.4 - Introdução
+	2.5 - Apresentação do projeto
+	2.6 - Objetivos geral e específico
+	2.7 - Justificativa
+	2.8 - Metodologia
+	2.9 - Arquitetura do Sistema (Modelagem)
+		2.9.1 - Requisitos Funcionais
+		2.9.2 - Requisitos Não Funcionais
+		2.9.3 - Modelagem Funcional
+		2.9.4 - Diagrama  Casos de Uso
+		2.9.5 - Detalhamento  casos de uso
+		2.9.6 - Modelo Conceitual
+		2.9.7 - Modelo Lógico
+	3 - Modelo Físico
+
+Entregar documentação por e-mail
+mglmatiolla@gmail.com
+Assunto: Entrega PI - turma noite - 07-05-26
+Corpo do e-mail: Nome do aluno + documentação técnica
