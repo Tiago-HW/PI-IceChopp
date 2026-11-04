@@ -13,9 +13,29 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href=".\css\estilo.css">
+    <link rel="stylesheet" href=".\css\idade.css">
 </head>
 
 <body>
+
+    <div id="verificacao-idade" class="overlay-idade">
+        <div class="idade">
+            <img id="IChopp" src=".\img\logoICescuro.png">
+
+            <h2 id="perguntaIdade">Você tem 18 anos ou mais?</h2>
+
+            <p id="avisoIdade">
+                Para acessar nosso site, você precisa ser maior que 18 anos.
+            </p>
+
+            <div class="botoes-idade">
+                <button onclick="sairSite()">Não</button>
+                <button onclick="entrarSite()">Sim, sou maior que 18 anos</button>
+            </div>
+        </div>
+    </div>
+
+
     <header class="topo">
         <div class="wrap">
             <img class="marca" src="img/logoMinAmarela.png" alt="logo">
@@ -125,7 +145,8 @@
                         </div>
                     </article>
                 </div>
-                <div class="acoes"><a class="btn" style="color:var(--garrafa-2)" href="./pages/produtos.html">Ver todos os
+                <div class="acoes"><a class="btn" style="color:var(--garrafa-2)" href="./pages/produtos.html">Ver todos
+                        os
                         produtos</a></div>
             </div>
         </section>
@@ -148,6 +169,7 @@
         <div class="wrap"><small>© 2026 Sua Distribuidora. Beba com moderação. Venda proibida para menores de 18
                 anos.</small></div>
     </footer>
+    <script src=".\javascript\idade.js"></script>
 </body>
 
 </html>
