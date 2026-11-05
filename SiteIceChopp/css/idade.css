@@ -53,15 +53,48 @@
 #caixaNegado{
      margin-top: 100px;
 }
+#bannerAN{
+    width: 1600px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 60px 0 60px 0px;
+}
 .TextoEx{
+    text-align: center;
     margin-right: 100px;
-    margin-top: 150px;
-    margin-left: 150px;
+    margin-top: 95px;
 }
 .ptext{
 color: #000255;
-text-align: justify;
+margin-left: 392px;
+margin-top: 10px;
+font-size: 25px;
 }
 .h1text{
 color: #000255;
+}
+
+.rodapeN {
+    background: var(--garrafa-2);
+    color: #D9E3DC;
+    padding: 3rem 0 2rem;
+    font-size: .98rem
+}
+
+.rodapeN .wrap {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+.rodapeN h3 {
+    color: var(--ambar-claro);
+    font-size: 1.05rem
+}
+
+.rodapeN small {
+    display: block;
+    margin-top: 2rem;
+    opacity: .7
 }
