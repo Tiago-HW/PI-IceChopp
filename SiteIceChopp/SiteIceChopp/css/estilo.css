@@ -1,0 +1,444 @@
+/* =====================================================================
+   ESTILO PRINCIPAL — usado por TODAS as páginas
+   Coisas específicas de cada página ficam em css/<pagina>.css
+   ===================================================================== */
+
+
+/* =====================================================================
+   1) FONTES  ←  É AQUI QUE SE TROCA A FONTE DO SITE INTEIRO
+   ---------------------------------------------------------------------
+   Para trocar:
+   1. Escolha a fonte em fonts.google.com e cole o link no @import abaixo
+   2. Troque o nome da fonte nas variáveis --fonte-titulo / --fonte-texto
+   Só isso. Nenhum outro arquivo precisa ser mexido.
+   ===================================================================== */
+@import url("https://fonts.google.com/specimen/Aleo?query=aleo&preview.script=Latn");
+@import url("https://fonts.google.com/specimen/Barlow?preview.script=Latn");
+
+:root {
+    --fonte-titulo: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;  /* h1, h2, h3, cabeçalho de tabela */
+    --fonte-texto: "Aleo", "Segoe UI", system-ui, sans-serif;                   /* todo o resto */
+}
+
+
+/* =====================================================================
+   2) CORES E MEDIDAS
+   ===================================================================== */
+:root {
+    --garrafa: #0071bc;
+    --garrafa-2: #000255;
+    --ambar: #fbb03b;
+    --ambar-claro: #fbb03b;
+    --espuma: #F4F6F1;
+    --tinta: #17261F;
+    --malte: #5A3411;
+    --linha: #D5DBD2;
+    --branco: #fff;
+    --raio: 10px;
+    --larg: 1120px;
+}
+
+
+/* =====================================================================
+   3) BASE
+   ===================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--tinta);
+    background: var(--espuma);
+    line-height: 1.6;
+    font-size: 1.0625rem;
+}
+
+/* botões e campos herdam a fonte do site (o navegador não faz isso sozinho) */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--ambar);
+    outline-offset: 3px;
+}
+
+.wrap {
+    max-width: var(--larg);
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+p {
+    max-width: 62ch;
+}
+
+section {
+    padding: 4.5rem 0;
+}
+
+
+/* =====================================================================
+   4) CABEÇALHO
+   ===================================================================== */
+.topo {
+    background: var(--garrafa-2);
+    color: var(--espuma);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topo .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 68px;
+    flex-wrap: wrap;
+}
+
+.marca {
+    width: 66px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: .25rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    display: block;
+    padding: .5rem .9rem;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .98rem;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.menu a[aria-current="page"] {
+    background: var(--ambar);
+    color: var(--garrafa-2);
+}
+
+
+/* =====================================================================
+   5) BOTÕES
+   ===================================================================== */
+.btn {
+    display: inline-block;
+    padding: .85rem 1.5rem;
+    border-radius: 99px;
+    text-decoration: none;
+    border: 2px solid var(--ambar);
+    background: var(--ambar);
+    color: var(--garrafa-2);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background .2s;
+}
+
+.btn:hover {
+    background: var(--ambar-claro);
+}
+
+.btn.sec {
+    background: transparent;
+    color: inherit;
+    border-color: currentColor;
+}
+
+.btn.sec:hover {
+    background: rgba(255, 255, 255, .12);
+}
+
+.acoes {
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    margin-top: 1.6rem;
+}
+
+
+/* =====================================================================
+   6) BLOCOS REUTILIZÁVEIS (cartões, grades, faixas de seção)
+   ===================================================================== */
+
+/* topo das páginas internas (Produtos, Serviços, Contato) */
+.pagina-topo {
+    background: var(--garrafa);
+    color: var(--espuma);
+    padding: 3.5rem 0;
+}
+
+.pagina-topo p {
+    margin-top: .8rem;
+    color: #D9E3DC;
+    font-size: 1.15rem;
+}
+
+.grade {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+}
+
+.cartao {
+    background: var(--branco);
+    color: var(--tinta);
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+    padding: 1.6rem;
+}
+
+.cartao.forte {
+    background: var(--garrafa);
+    color: var(--espuma);
+    border-color: var(--garrafa);
+}
+
+.cartao ul {
+    margin: .8rem 0 0 1.1rem;
+}
+
+.cartao li {
+    margin: .25rem 0;
+}
+
+.faixa {
+    height: 6px;
+    border-radius: 99px;
+    background: var(--ambar);
+    width: 48px;
+    margin-bottom: 1rem;
+}
+
+/* cartão de estilo de chopp (Início e Produtos) */
+.estilo {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.gota {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+/* seção de fundo escuro */
+.escuro {
+    background: var(--garrafa-2);
+    color: var(--espuma);
+}
+
+.escuro p {
+    color: #D9E3DC;
+}
+
+/* duas colunas */
+.duas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nota {
+    font-size: .92rem;
+    color: #4b5b53;
+}
+
+
+/* =====================================================================
+   7) RODAPÉ (inspirado no da Brahma, com a identidade da Ice Chopp)
+   ---------------------------------------------------------------------
+   Linha 1: logo | redes sociais | links do site
+   Linha 2: textos legais   | links de atendimento
+   ===================================================================== */
+.rodape {
+    background: var(--garrafa-2);
+    color: var(--espuma);
+    border-top: 5px solid var(--ambar);
+    padding: 2.5rem 0 2rem;
+    font-size: .95rem;
+}
+
+.rodape a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.rodape a:hover {
+    color: var(--ambar);
+}
+
+.rodape ul {
+    list-style: none;
+}
+
+/* linha 1 */
+.rodape-topo {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rodape-marca img {
+    width: 150px;
+    height: auto;
+}
+
+.rodape-redes {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.rodape-redes a {
+    display: block;
+    color: var(--ambar);
+    text-decoration: none;
+}
+
+.rodape-redes a:hover {
+    color: var(--branco);
+}
+
+.rodape-redes svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* listas de links (linhas 1 e 2) */
+.rodape-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: .6rem 2rem;
+    font-weight: 600;
+}
+
+/* linha 2 */
+.rodape-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 2.25rem;
+}
+
+.rodape-base .rodape-links {
+    max-width: 460px;
+}
+
+.rodape-legal {
+    flex: 1 1 auto;
+}
+
+.rodape-legal p {
+    max-width: none;
+    margin-top: .35rem;
+    color: #D9E3DC;
+}
+
+.rodape-legal p:first-child {
+    margin-top: 0;
+}
+
+
+/* =====================================================================
+   8) RESPONSIVO E ACESSIBILIDADE
+   ===================================================================== */
+@media (max-width: 820px) {
+    .duas {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3.2rem 0;
+    }
+
+    .rodape-topo {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .rodape-links {
+        justify-content: center;
+    }
+
+    .rodape-base {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

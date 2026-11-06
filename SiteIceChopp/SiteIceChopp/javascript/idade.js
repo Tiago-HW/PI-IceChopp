@@ -15,6 +15,5 @@ function entrarSite() {
 
 // Caso seja menor de idade
 function sairSite() {
-    window.location.href = "../pages/acessoNegado.html";
+    window.location.href = "pages/acessoNegado.html";
 }
-localStorage.removeItem("idadeConfirmada");

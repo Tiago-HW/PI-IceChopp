@@ -7,19 +7,16 @@
     <title>Chopp gelado para varejo e eventos</title>
     <meta name="description"
         content="Distribuidora de chopp: fornecimento para mercados, bares e aluguel de barris para eventos.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href=".\css\estilo.css">
-    <link rel="stylesheet" href=".\css\idade.css">
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/idade.css">
 </head>
 
-<body>
+<body class="pagina-inicio">
     <div id="verificacao-idade" class="overlay-idade">
         <div class="idade">
-            <img id="IChopp" src=".\img\logoICescuro.png">
+            <img id="IChopp" src="./img/logoICescuro.png">
 
             <h2 id="perguntaIdade">Você tem 18 anos ou mais?</h2>
 
@@ -40,10 +37,10 @@
             <img class="marca" src="img/logoMinAmarela.png" alt="logo">
             <nav aria-label="Principal">
                 <ul class="menu">
-                    <li><a href=".\index.html" aria-current="page">Início</a></li>
-                    <li><a href=".\pages\produtos.html">Produtos</a></li>
-                    <li><a href=".\pages\servicos.html">Serviços</a></li>
-                    <li><a href=".\pages\contato.html">Contato</a></li>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="pages/produtos.html">Produtos</a></li>
+                    <li><a href="pages/servicos.html">Serviços</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,8 +53,8 @@
                     <p>Abastecemos mercados, bares e restaurantes com entrega regular, e alugamos barris e chopeiras
                         para o seu evento.</p>
                     <div class="acoes">
-                        <a class="btn" href="./pages/contato.html">Pedir orçamento</a>
-                        <a class="btn sec" href="./pages/produtos.html">Ver produtos</a>
+                        <a class="btn" href="pages/contato.html">Pedir orçamento</a>
+                        <a class="btn sec" href="pages/produtos.html">Ver produtos</a>
                     </div>
                 </div>
                 <img id=logo src="img/logoICescuro.png" alt="Logo">
@@ -75,20 +72,20 @@
                         <h3>Varejo</h3>
                         <p>Mercados, bares, restaurantes e lanchonetes com reposição regular de barris e suporte para a
                             chopeira.</p>
-                        <p><a href="./pages/servicos.html#varejo">Conhecer o atendimento</a></p>
+                        <p><a href="pages/servicos.html#varejo">Conhecer o atendimento</a></p>
                     </article>
                     <article class="cartao">
                         <div class="faixa"></div>
                         <h3>Eventos</h3>
                         <p>Aluguel de barris, chopeiras e cilindro de CO₂ para festas, formaturas, casamentos e
                             confraternizações.</p>
-                        <p><a href="./pages/servicos.html#eventos">Como funciona o aluguel</a></p>
+                        <p><a href="pages/servicos.html#eventos">Como funciona o aluguel</a></p>
                     </article>
                     <article class="cartao">
                         <div class="faixa"></div>
                         <h3>Pessoa física</h3>
                         <p>Churrasco em casa também conta. Pedidos menores com retirada ou entrega combinada.</p>
-                        <p><a href="./pages/contato.html">Fazer um pedido</a></p>
+                        <p><a href="pages/contato.html">Fazer um pedido</a></p>
                     </article>
                 </div>
             </div>
@@ -108,7 +105,7 @@
                         <li><strong>Nós recolhemos.</strong> Barril fechado que não foi aberto pode ser devolvido,
                             conforme combinado.</li>
                     </ol>
-                    <div class="acoes"><a class="btn" href="./pages/contato.html">Reservar para meu evento</a></div>
+                    <div class="acoes"><a class="btn" href="pages/contato.html">Reservar para meu evento</a></div>
                 </div>
                 <div class="cartao forte">
                     <h3>Por que escolher chopp em barril</h3>
@@ -144,7 +141,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="acoes"><a class="btn" style="color:var(--garrafa-2)" href="./pages/produtos.html">Ver todos
+                <div class="acoes"><a class="btn" href="pages/produtos.html">Ver todos
                         os
                         produtos</a></div>
             </div>
@@ -152,23 +149,44 @@
     </main>
     <footer class="rodape">
         <div class="wrap">
-            <div>
-                <h3>Sua Distribuidora</h3>
-                <p>Distribuidora de chopp para mercados, bares, restaurantes e eventos.</p>
+            <div class="rodape-topo">
+                <a class="rodape-marca" href="index.html">
+                    <img src="img/logoICescuro.png" alt="Ice Chopp Distribuidora">
+                </a>
+
+                <ul class="rodape-redes" aria-label="Redes sociais">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+                    <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a></li>
+                </ul>
+
+                <nav aria-label="Rodapé">
+                    <ul class="rodape-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="pages/produtos.html">Produtos</a></li>
+                        <li><a href="pages/servicos.html">Serviços</a></li>
+                        <li><a href="pages/contato.html">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div>
-                <h3>Contato</h3>
-                <p>WhatsApp: (00) 00000-0000<br>E-mail: contato@seudominio.com.br<br>Seg a sáb, 8h às 18h</p>
-            </div>
-            <div>
-                <h3>Endereço</h3>
-                <p>Rua Exemplo, 123 – Bairro<br>Cidade – UF</p>
+
+            <div class="rodape-base">
+                <div class="rodape-legal">
+                    <p>© 2026 Ice Chopp. Todos os direitos reservados</p>
+                    <p>Rua Exemplo, 123 – Bairro, Cidade – UF · Seg a Seg, 8h às 18h</p>
+                    <p>Beba com moderação. Venda proibida para menores de 18 anos.</p>
+                </div>
+
+                <ul class="rodape-links">
+                    <li><a href="pages/servicos.html#eventos">Aluguel de barris</a></li>
+                    <li><a href="pages/servicos.html#varejo">Atendimento ao varejo</a></li>
+                    <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp (51) 00000-0000</a></li>
+                    <li><a href="mailto:comercial@icechopp.com.br">comercial@icechopp.com.br</a></li>
+                </ul>
             </div>
         </div>
-        <div class="wrap"><small>© 2026 Sua Distribuidora. Beba com moderação. Venda proibida para menores de 18
-                anos.</small></div>
     </footer>
-    <script src=".\javascript\idade.js"></script>
+    <script src="./javascript/idade.js"></script>
 </body>
 
 </html>

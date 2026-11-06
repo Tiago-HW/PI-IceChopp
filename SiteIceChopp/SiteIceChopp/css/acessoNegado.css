@@ -1,0 +1,28 @@
+/* =====================================================================
+   PÁGINA: ACESSO NEGADO (pages/acessoNegado.html)
+   ===================================================================== */
+
+#bannerAN {
+    width: 1600px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 60px 0 60px 0px;
+}
+
+.TextoEx {
+    text-align: center;
+    margin-right: 100px;
+    margin-top: 95px;
+}
+
+.h1text {
+    color: #000255;
+}
+
+.ptext {
+    color: #000255;
+    margin-left: 392px;
+    margin-top: 10px;
+    font-size: 25px;
+}
