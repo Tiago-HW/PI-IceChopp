@@ -17,3 +17,5 @@ function entrarSite() {
 function sairSite() {
     window.location.href = "pages/acessoNegado.html";
 }
+
+//localStorage.removeItem("idadeConfirmada");
