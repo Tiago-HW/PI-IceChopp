@@ -1,0 +1,38 @@
+/* =====================================================================
+   PÁGINA: PRODUTOS (pages/produtos.html)
+   ===================================================================== */
+
+.pagina-produtos .nota {
+    margin-top: 1rem;
+}
+
+/* ===== Tabela de tamanhos de barril ===== */
+.rolagem {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: var(--raio);
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+th,
+td {
+    padding: .9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--linha);
+}
+
+th {
+    background: var(--garrafa);
+    color: var(--espuma);
+    font-family: var(--fonte-titulo);
+}
+
+tbody {
+    color: var(--tinta);
+}

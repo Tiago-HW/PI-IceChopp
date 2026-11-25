@@ -1,0 +1,41 @@
+/* =====================================================================
+   PÁGINA: CONTATO (pages/contato.html)
+   ===================================================================== */
+
+.pagina-contato .duas {
+    align-items: start;
+}
+
+.pagina-contato .cartao p + h3 {
+    margin-top: 1.2rem;
+}
+
+/* ===== Formulário ===== */
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 560px;
+}
+
+label {
+    font-weight: 600;
+    display: grid;
+    gap: .3rem;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: .75rem .9rem;
+    border: 1.5px solid var(--linha);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--tinta);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--garrafa);
+}

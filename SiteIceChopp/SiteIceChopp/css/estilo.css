@@ -75,7 +75,7 @@ svg {
 }
 
 a {
-    color: inherit;
+    color: var(--ambar);
 }
 
 :focus-visible {
@@ -127,7 +127,7 @@ section {
    4) CABEÇALHO
    ===================================================================== */
 .topo {
-    background: var(--garrafa-2);
+    background: var(--espuma);
     color: var(--espuma);
     position: sticky;
     top: 0;
@@ -144,13 +144,16 @@ section {
 }
 
 .marca {
-    width: 66px;
+    align-items:start;
+    width: 100px;
+    margin-top: 25px;
     height: auto;
 }
 
 .menu {
     display: flex;
     gap: .25rem;
+    margin-top: 20px;
     list-style: none;
     flex-wrap: wrap;
 }
